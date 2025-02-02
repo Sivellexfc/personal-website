@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import Image from "next/image";
 import pp from "../public/pp.jpg";
 import ThemeToggle from "../components/ui/theme-toggle";
@@ -76,7 +76,7 @@ export default function Home() {
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                industry. Lorem Ipsum has been the industrys standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
@@ -133,7 +133,7 @@ export default function Home() {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. Lorem
                 Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
+                industry. Lorem Ipsum has been the industrys.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export default function Home() {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. Lorem
                 Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
+                industry. Lorem Ipsum has been the industrys.
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export default function Home() {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. Lorem
                 Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's.
+                industry. Lorem Ipsum has been the industrys.
               </p>
             </div>
           </motion.section>
@@ -202,7 +202,7 @@ export default function Home() {
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                industry. Lorem Ipsum has been the industrys standard dummy
                 text ever since the 1500s, when an unknown.
               </p>
             </div>

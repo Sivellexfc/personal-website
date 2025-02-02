@@ -1,0 +1,10 @@
+{
+    "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
+      "no-unused-vars": "warn",
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"]
+    }
+  }
