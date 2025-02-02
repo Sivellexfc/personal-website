@@ -14,7 +14,6 @@ import im2 from "../public/2.jpg";
 import im3 from "../public/3.png";
 import im4 from "../public/4.png";
 import im5 from "../public/5.png";
-import im6 from "../public/6.png";
 
 export default function Home() {
   return (
