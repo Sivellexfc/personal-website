@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import ThemeToggle from "./theme-toggle";
+import React from "react";
 
 const Header = () => {
   return (
