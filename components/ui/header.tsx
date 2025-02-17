@@ -20,15 +20,7 @@ const Header = () => {
       >
         About Me
       </ScrollLink>
-      <ScrollLink
-        to="skills"
-        smooth={true}
-        duration={500}
-        offset={-100}
-        className="cursor-pointer"
-      >
-        Skills
-      </ScrollLink>
+
       <ScrollLink
         to="education"
         smooth={true}
@@ -46,6 +38,16 @@ const Header = () => {
         className="cursor-pointer"
       >
         Projects
+      </ScrollLink>
+
+      <ScrollLink
+        to="projects"
+        smooth={true}
+        duration={500}
+        offset={-100}
+        className="cursor-pointer"
+      >
+        Certificates
       </ScrollLink>
 
       <ThemeToggle></ThemeToggle>

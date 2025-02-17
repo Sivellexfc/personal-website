@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import pp from "../public/pp.jpg";
+import pp from "../public/pp.png";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -11,11 +11,12 @@ import { IoDownloadOutline } from "react-icons/io5";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link as ScrollLink, Element } from "react-scroll";
 
-import im1 from "../public/1.png";
-import im2 from "../public/2.jpg";
-import im3 from "../public/3.png";
-import im4 from "../public/4.png";
-import im5 from "../public/5.png";
+import im1 from "../public/management.jpg";
+import im2 from "../public/colony_counter.jpeg";
+import im3 from "../public/eticaret.png";
+import im4 from "../public/arelya.jpg";
+import im5 from "../public/noimage.jpg";
+import im6 from "../public/noimage.jpg";
 
 export default function Home() {
   return (
@@ -34,17 +35,9 @@ export default function Home() {
             offset={-100}
             className="cursor-pointer"
           >
-            About Me
+            Hakkımda
           </ScrollLink>
-          <ScrollLink
-            to="skills"
-            smooth={true}
-            duration={500}
-            offset={-100}
-            className="cursor-pointer"
-          >
-            Skills
-          </ScrollLink>
+
           <ScrollLink
             to="education"
             smooth={true}
@@ -52,7 +45,7 @@ export default function Home() {
             offset={-100}
             className="cursor-pointer"
           >
-            Education
+            Eğitim
           </ScrollLink>
           <ScrollLink
             to="projects"
@@ -61,7 +54,17 @@ export default function Home() {
             offset={-100}
             className="cursor-pointer"
           >
-            Projects
+            Projeler
+          </ScrollLink>
+
+          <ScrollLink
+            to="certificates"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            className="cursor-pointer"
+          >
+            Sertifikalar
           </ScrollLink>
 
           <ThemeToggle></ThemeToggle>
@@ -76,50 +79,61 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="space-y-1"
               >
-                <div>
-                  <div className="flex items-center justify-evenly px-20 my-[100px]">
-                    <div className="w-24 h-24 rounded-full overflow-hidden">
-                      <Image
-                        src={pp}
-                        alt="profile-picture"
-                        className="cursor-pointer transition-all duration-300 hover:scale-110 "
-                      ></Image>
-                    </div>
-                    <div>
-                      <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent">
-                        Musluhan Çavuş
-                      </h1>
-                      <p className="text-gray-600 dark:text-gray-400">
-                        Computer Engineer & Software Developer
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-400">
-                        Izmir, Denizli, Turkey
-                      </p>
-                      <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="flex items-center gap-3 mt-6"
-                      >
-                        <Button className="rounded-xl bg-gradient-to-r from-rose-600 to-indigo-300 text-white transition-transform hover:scale-105">
-                          Resume
-                          <IoDownloadOutline></IoDownloadOutline>
-                        </Button>
-                        <Link
-                          href="#"
-                          className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
-                        >
-                          <FaGithub className="w-6 h-6"></FaGithub>
-                        </Link>
+                <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8 px-6 md:px-20 my-16">
+                  {/* Profil Fotoğrafı */}
+                  <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden">
+                    <Image
+                      src={pp}
+                      alt="profile-picture"
+                      className="transition-all duration-300 hover:scale-110"
+                    />
+                  </div>
 
-                        <Link
-                          href="#"
-                          className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                  {/* Bilgiler */}
+                  <div className="flex flex-col items-center md:items-start">
+                    <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent">
+                      Musluhan Çavuş
+                    </h1>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
+                      Computer Engineer & Software Developer
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
+                      Izmir, Denizli, Turkey
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm md:text-base">
+                      musluhan01@hotmail.com
+                    </p>
+
+                    {/* Butonlar */}
+                    <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className="flex flex-wrap justify-center md:justify-start items-center gap-3 mt-6"
+                    >
+                      <Button className="rounded-xl bg-gradient-to-r from-rose-600 to-indigo-300 text-white transition-transform hover:scale-105">
+                        <a
+                          href="resume.pdf"
+                          download="MusluhanCavus_resume.pdf"
+                          className="flex gap-2"
                         >
-                          <FaLinkedin className="w-6 h-6"></FaLinkedin>
-                        </Link>
-                      </motion.div>
-                    </div>
+                          Özgeçmiş
+                          <IoDownloadOutline />
+                        </a>
+                      </Button>
+                      <Link
+                        href="https://github.com/Sivellexfc"
+                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                      >
+                        <FaGithub className="w-6 h-6" />
+                      </Link>
+                      <Link
+                        href="https://www.linkedin.com/in/musluhan/"
+                        className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                      >
+                        <FaLinkedin className="w-6 h-6" />
+                      </Link>
+                    </motion.div>
                   </div>
                 </div>
               </motion.div>
@@ -164,88 +178,6 @@ export default function Home() {
             </motion.div>
           </section>
 
-          <Element name="skills">
-            <motion.section
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
-                Experience
-              </h2>
-
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
-                      July, 2024 - Present
-                    </p>
-                    <p className="font-semibold">System Engineer</p>
-                    <p className="text-blue-600 dark:text-blue-400">
-                      Company X
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industrys
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the
-                  industrys.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
-                      July, 2024 - Present
-                    </p>
-                    <p className="font-semibold">System Engineer</p>
-                    <p className="text-blue-600 dark:text-blue-400">
-                      Company X
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industrys
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the
-                  industrys.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
-                      July, 2024 - Present
-                    </p>
-                    <p className="font-semibold">System Engineer</p>
-                    <p className="text-blue-600 dark:text-blue-400">
-                      Company X
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industrys
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the
-                  industrys.
-                </p>
-              </div>
-            </motion.section>
-          </Element>
-
           <Element name="education">
             <motion.section
               initial={{ opacity: 0, y: 100 }}
@@ -253,7 +185,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">
+              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
                 Education
               </h2>
 
@@ -321,107 +253,282 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">
+              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
                 Projects
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
+                <Card
+                  className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+                 dark:border-zinc-800 transition-transform duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
                     <Image
                       src={im1}
                       alt=""
-                      className="rounded-lg mb-4 "
-                    ></Image>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">Project 1</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Next.js MySQL
-                        </p>
-                      </div>
-                      <Button variant="ghost" size="icon"></Button>
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+                    <div className="flex-1 flex flex-col justify-between gap-2 text-center sm:text-left">
+                      <h3 className="font-medium">
+                        Yazılım Projelerinde Süreç Yönetimi için Web Tabanlı
+                        Proje Yönetim Sistemi (2025)
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Lisans Tez’i kapsamında web tabanlı Modern Süreç Yönetim
+                        sisteminin geliştirilmesine hala devam etmekteyim.
+                      </p>
+                      <a
+                        href="https://github.com/Sivellexfc/project-management-system-frontend"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Source code
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
+                <Card
+                  className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+                 dark:border-zinc-800 transition-transform duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
                     <Image
                       src={im2}
                       alt=""
-                      className="rounded-lg mb-4 "
-                    ></Image>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">Project 1</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Next.js MySQL
-                        </p>
-                      </div>
-                      <Button variant="ghost" size="icon"></Button>
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+                    <div className="flex-1 flex flex-col justify-between gap-2 text-center sm:text-left">
+                      <h3 className="font-medium">Colony Counter 2024</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Pamukkale Üniversitesi Gıda Mühendisliği bölümünden
+                        Prof. Dr. Hakan KARACA’ya bakteri koloni sayımını
+                        kolaylaştıran open-source bir uygulama geliştirdim.
+                      </p>
+                      <a
+                        href="https://github.com/Sivellexfc/colony-counter-project"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Source code
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
+                <Card
+                  className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+                 dark:border-zinc-800 transition-transform duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
                     <Image
                       src={im3}
                       alt=""
-                      className="rounded-lg mb-4 "
-                    ></Image>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">Project 1</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Next.js MySQL
-                        </p>
-                      </div>
-                      <Button variant="ghost" size="icon"></Button>
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+                    <div className="flex-1 flex flex-col justify-between gap-2 text-center sm:text-left">
+                      <h3 className="font-medium">E-ticaret Sitesi 2024</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        E-ticaret projemin backend’ini Java teknolojileri,
+                        frontend’ini React ile geliştirdim.
+                      </p>
+                      <a
+                        href="https://github.com/Sivellexfc/ecommerce-app-frontend-react"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Source code
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
+                <Card
+                  className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+                 dark:border-zinc-800 transition-transform duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
                     <Image
                       src={im4}
                       alt=""
-                      className="rounded-lg mb-4 "
-                    ></Image>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">Project 1</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Next.js MySQL
-                        </p>
-                      </div>
-                      <Button variant="ghost" size="icon"></Button>
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+                    <div className="flex-1 flex flex-col justify-between gap-2  text-center sm:text-left">
+                      <h3 className="font-medium">Arelya Zemin&Tavan 2023</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Arelya mimarlık şirketi için kullanıcı dostu ve dikkat
+                        çekici bir web sitesi geliştirdim.
+                      </p>
+                      <a
+                        href="https://www.arelya.com.tr"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Visit
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
+                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105">
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
+                    {/* Resim */}
                     <Image
                       src={im5}
-                      alt=""
-                      className="rounded-lg mb-4 "
-                    ></Image>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">Project 1</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Next.js MySQL
-                        </p>
-                      </div>
-                      <Button variant="ghost" size="icon"></Button>
+                      alt="Backend Blog Projesi 2022"
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+
+                    {/* İçerik */}
+                    <div className="flex-1 flex flex-col justify-between gap-2 text-center sm:text-left">
+                      <h3 className="font-medium">Backend Blog Projesi 2022</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Bursa Büyükşehir Belediyesi JAVA Spring Boot Bootcamp’i
+                        kapsamında bir blog sistemi backend’i geliştirdim.
+                      </p>
+                      <a
+                        href="https://github.com/Sivellexfc/code16-final-blog-application"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Source code
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card
+                  className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+                 dark:border-zinc-800 transition-transform duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-4 flex flex-col sm:flex-row items-center gap-4">
+                    {/* Resim */}
+                    <Image
+                      src={im6}
+                      alt="What’s Inside Mobile App"
+                      className="rounded-lg w-full sm:w-64 h-auto sm:h-32 object-contain"
+                    />
+
+                    {/* İçerik */}
+                    <div className="flex-1 flex flex-col justify-between gap-2 text-center sm:text-left">
+                      <h3 className="font-medium">
+                        What’s Inside (Mobile App) 2022
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Flutter ile ürünlerin içeriğini analiz eden, kullanıcıya
+                        uygun olup olmadığını gösteren bir mobil uygulama
+                        geliştirdim.
+                      </p>
+                      <a
+                        href="#"
+                        className="text-sm text-indigo-500 dark:text-purple-500"
+                      >
+                        Detaylar
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </motion.section>
           </Element>
+
+          <Element name="certificates">
+            <motion.section
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
+                Certificates
+              </h2>
+
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
+                      2024
+                    </p>
+                    <p className="font-semibold">
+                      HangiKredi DevOps Okulu Eğitim Sertifikası
+                    </p>
+                    <p className="text-blue-600 dark:text-blue-400 text-sm">
+                      HangiKredi
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  HangiKredi’nin gerçekleştirmiş olduğu 30 Saatlik DevOps Okulu
+                  programını başarıyla tamamladım. Bu eğitim kapsamında DevOps
+                  konseptleri, Jenkins, Linux, Networking,
+                  GIT,Orchestration,Kubernetes,, Monitoring ve Security
+                  kavramlarında teknik bilgi edindim ve pratik yapma imkanı
+                  buldum.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
+                      2025
+                    </p>
+                    <p className="font-semibold">HCCDA - Tech Essentials</p>
+                    <p className="text-blue-600 dark:text-blue-400 text-sm">
+                      Huawei
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Huawei Certified Cloud Developer Associate (HCCDA) - Tech
+                  Essential sertifikası, bulut bilişim ve yazılım geliştirme
+                  konularında temel yetkinlikleri kazandıran bir sertifikadır.
+                  Huawei Cloud ekosisteminde uygulama geliştirme, mikro hizmet
+                  mimarisi, API entegrasyonu ve temel bulut servisleri
+                  konularında bilgi sahibi olduğumu gösterir.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
+                      2023
+                    </p>
+                    <p className="font-semibold">
+                      Bursa Büyükşehir Belediyesi Back-End Web Development
+                      Code16 Bootcamp
+                    </p>
+                    <p className="text-blue-600 dark:text-blue-400 text-sm">
+                      Bursa Büyükşehir Belediyesi
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Bursa Büyükşehir Belediyesinin aracılığı ile gerçekleşen
+                  Code16 Java Backend geliştirme bootcamp eğitimini başarıyla
+                  tamamladım. Bu bootcampte Java ve Spring framework’te
+                  derinlemesine bilgi ve deneyim kazandım.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 ">
+                      2024
+                    </p>
+                    <p className="font-semibold">
+                      React: Revolution Build Modern Web Apps Bootcamp
+                    </p>
+                    <p className="text-blue-600 dark:text-blue-400 text-sm">
+                      techcareer.net
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Techcareer tarafından düzenlenmiş olan React: Revolution Build
+                  Modern Web Apps Bootcamp programını başarıyla tamamlayarak bu
+                  sertifikayı almaya hak kazandım.
+                </p>
+              </div>
+            </motion.section>
+          </Element>
+
           <p className="text-gray-600 justify-center flex">
             © 2025 Musluhan Çavuş
           </p>
