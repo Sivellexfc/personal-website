@@ -202,7 +202,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  2021'de başlamış olduğum olduğum Bilgisayar Mühendisliği bölümüne 4. sınıf olarak devam etmekteyim.
+                  2021 yılında başlamış olduğum olduğum Bilgisayar Mühendisliği bölümüne 4. sınıf olarak devam etmekteyim.
                 </p>
               </div>
 
