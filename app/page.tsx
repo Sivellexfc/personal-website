@@ -146,7 +146,7 @@ export default function Home() {
               className="space-y-3"
             >
               <h2 className="text-lg font-semibold">
-                Kullanıcı dostu, yenilikçi web çözümleri
+                
               </h2>
 
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
