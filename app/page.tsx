@@ -95,10 +95,10 @@ export default function Home() {
                       Musluhan Çavuş
                     </h1>
                     <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                      Computer Engineer & Software Developer
+                      Yazılım Mühendisliği @ Bilgisayar Mühendisliği
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                      Izmir, Denizli, Turkey
+                      Izmir, Denizli, Türkiye
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm md:text-base">
                       musluhan01@hotmail.com
@@ -186,7 +186,7 @@ export default function Home() {
               className="space-y-8"
             >
               <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
-                Education
+                Eğitim
               </h2>
 
               <div className="space-y-2">
@@ -197,14 +197,12 @@ export default function Home() {
                     </p>
                     <p className="font-semibold">Computer Engineering</p>
                     <p className="text-blue-600 dark:text-blue-400 text-sm">
-                      Pamukkale University
+                      Pamukkale Universitesi
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  I am currently continuing my studies as a fourth-year student
-                  in the Computer Engineering department, which I enrolled in
-                  2021.
+                  2021 yılında başlamış olduğum olduğum Bilgisayar Mühendisliği bölümüne 4. sınıf olarak devam etmekteyim.
                 </p>
               </div>
 
@@ -212,7 +210,7 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
                     <p className="text-sm text-gray-600 dark:text-gray-400 ">
-                      2024 FEB - JUNE
+                      2024 Şubat - Temmuz
                     </p>
                     <p className="font-semibold">Computer Sience Engineering</p>
                     <p className="text-blue-600 dark:text-blue-400 text-sm">
@@ -221,9 +219,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  I studied at the Polytechnic Institute of Porto in Portugal as
-                  part of the Erasmus+ Project during the Spring semester of the
-                  2023-2024 academic year.
+                  2023-2024 akademik yılının bahar döneminde Erasmus+ Projesi kapsamında Portekiz’deki Porto Politeknik Enstitüsü’nde eğitim aldım.
                 </p>
               </div>
 
@@ -234,13 +230,12 @@ export default function Home() {
                       2015 - 2019
                     </p>
                     <p className="text-blue-600 dark:text-blue-400 text-sm">
-                      Bursa Cumhuriyet Anatolian High School
+                      Bursa Cumhuriyet Anadolu Lisesi
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  In 2015, I gained admission to Bursa Cumhuriyet Anatolian High
-                  School and successfully completed my studies in 2019.
+                  2015 yılında Bursa Cumhuriyet Anadolu Lisesi’ne kabul edildim ve 2019 yılında eğitimimi başarıyla tamamladım.
                 </p>
               </div>
             </motion.section>
@@ -254,7 +249,7 @@ export default function Home() {
               className="space-y-8"
             >
               <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
-                Projects
+                Projeler
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
                 <Card
@@ -434,7 +429,7 @@ export default function Home() {
               className="space-y-8"
             >
               <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-purple-400 bg-clip-text text-transparent inline-block">
-                Certificates
+                Sertifikalar
               </h2>
 
               <div className="space-y-1">
