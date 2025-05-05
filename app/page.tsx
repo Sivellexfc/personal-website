@@ -162,18 +162,7 @@ export default function Home() {
                 geliştiricisi.{" "}
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
-                Merhaba, ben Musluhan, Pamukkale Üniversitesi 4. sınıf
-                bilgisayar mühendisliği öğrencisiyim. Web geliştirme alanında
-                React, HTML, CSS, Tailwind gibi teknolojilerde derinlemesine
-                bilgiye sahipken, Next.js ve Vue gibi modern frameworklerde
-                çalışmalar yapıyorum. Uygulama geliştirme sürecinde, kullanıcı
-                dostu ve etkili çözümler üretmek için en iyi uygulamaları ve
-                güncel web teknolojilerini kullanmaya özen gösteriyorum. Ayrıca
-                DevOps alanında kendimi geliştiriyor ve cloud
-                teknolojileri,container teknolojileri, Kubernetes ile monitoring
-                araçları üzerinde deneyim kazanıyorum. Bu alandaki bilgi
-                birikimimi sürekli olarak genişletiyor ve yenilikçi çözümler
-                üretmeye odaklanıyorum.
+                Bilgisayar Mühendisliği son sınıf öğrencisiyim. Yazılım geliştirme sürecinin sadece kodlamayla sınırlı olmadığını düşünüyorum; bu yüzden DevOps ve Cloud teknolojilerine özellikle ilgim var. AWS ve Huawei Cloud üzerinde servisler deploy ettim, Docker ve Kubernetes ile mikroservis mimarileri kurdum. Web tarafında ise React ve Next.js ile aktif olarak modern, kullanıcı dostu arayüzler geliştiriyorum.
               </p>
             </motion.div>
           </section>
